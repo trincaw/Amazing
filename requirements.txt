@@ -1,0 +1,6 @@
+tbselenium
+pytest
+pytest-mock
+requests
+pyTelegramBotAPI
+urllib3

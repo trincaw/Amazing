@@ -1,0 +1,7 @@
+/tor-browser-linux64-12.0.1_ALL
+/.pytest_cache
+/__pycache__
+debug.py
+*.db
+/.vscode
+telegram.txt

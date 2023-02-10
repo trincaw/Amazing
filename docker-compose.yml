@@ -1,0 +1,23 @@
+version: '3'
+services:
+# networks:
+  # my_network:
+  #   driver: bridge
+  tor:
+    image: dockage/tor-privoxy
+    # ports:
+    #   - "9050:9050"
+    #   - "9151:9151"
+    #   - "8118:8118"
+    networks:
+      - bot
+  python:
+    build: .
+    depends_on:
+      - tor
+    networks:
+      - bot
+    command: python3 ./main.py
+networks:
+  bot:
+    driver: bridge
